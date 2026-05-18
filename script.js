@@ -424,3 +424,158 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 /* ============================================================
    END OF SCRIPT
    ============================================================ */
+
+
+/* ============================================================
+   12. LOVED CARDS — staggered reveal on scroll
+   ============================================================ */
+(function initLovedCards() {
+  const cards = $$('.loved-card');
+  if (!cards.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // slight stagger per card
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+  cards.forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = `opacity .45s ease ${i * 0.06}s, transform .45s ease ${i * 0.06}s`;
+    observer.observe(card);
+  });
+})();
+
+/* ============================================================
+   13. STUDENT FAV CARDS — staggered reveal
+   ============================================================ */
+(function initSfavCards() {
+  const cards = $$('.sfav-card');
+  if (!cards.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  cards.forEach(card => observer.observe(card));
+})();
+
+/* ============================================================
+   14. OPEN STRIP — count-up animation for stats
+   ============================================================ */
+(function initCountUp() {
+  const stats = $$('.os-stat-num');
+  if (!stats.length) return;
+
+  // Only animate numbers, skip "24×7", "5★" etc.
+  const animateStat = (el) => {
+    const raw = el.textContent.trim();
+    const num = parseFloat(raw.replace(/[^0-9.]/g, ''));
+    if (isNaN(num) || num > 999) return; // skip non-numeric / 24×7 etc.
+    const suffix = raw.replace(/[0-9.]/g, '');
+    const duration = 1200;
+    const start = performance.now();
+
+    requestAnimationFrame(function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      const current = Math.round(eased * num);
+      el.textContent = current + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        $$('.os-stat-num').forEach(animateStat);
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const strip = $('.open-strip');
+  if (strip) observer.observe(strip);
+})();
+
+/* ============================================================
+   15. VIBE TILES — hover parallax tilt (subtle)
+   ============================================================ */
+(function initVibeTilt() {
+  const tiles = $$('.vibe-tile');
+  if (!tiles.length) return;
+
+  // Only on non-touch devices
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  tiles.forEach(tile => {
+    tile.addEventListener('mousemove', (e) => {
+      const rect = tile.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      tile.style.transform = `perspective(600px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) scale(1.02)`;
+    });
+    tile.addEventListener('mouseleave', () => {
+      tile.style.transform = '';
+    });
+  });
+})();
+
+/* ============================================================
+   16. LATE NIGHT SECTION — animate tag pills on scroll
+   ============================================================ */
+(function initLateNightTags() {
+  const tags = $$('.ln-tag');
+  if (!tags.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tags.forEach((tag, i) => {
+          setTimeout(() => {
+            tag.style.opacity = '1';
+            tag.style.transform = 'translateY(0)';
+          }, i * 80);
+        });
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.2 });
+
+  tags.forEach(tag => {
+    tag.style.opacity = '0';
+    tag.style.transform = 'translateY(10px)';
+    tag.style.transition = 'opacity .35s ease, transform .35s ease';
+  });
+
+  const section = $('.late-night');
+  if (section) observer.observe(section);
+})();
+
+/* ============================================================
+   17. SCROLL SPY — update active nav link for new sections
+   ============================================================ */
+(function extendScrollSpy() {
+  // The existing scroll spy in initScrollSpy() handles sections with id.
+  // New sections (#most-loved, #late-night, #student-favs, #open247, #cafe-vibes)
+  // all have IDs and are <section> elements so they're auto-picked up.
+  // No extra code needed — the existing IntersectionObserver covers them.
+})();
+
+/* ============================================================
+   END OF ADDITIONS
+   ============================================================ */
