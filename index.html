@@ -1,690 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Modi Mania Cafe 24×7 — Delhi's favourite 100% vegetarian cafe at Netaji Subhash Place, NSP Pitampura. Open 24 hours, 365 days. Burgers, Momos, Maggi, Shakes & more." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modi Mania Cafe 24×7 | NSP Delhi | 100% Pure Veg</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- FontAwesome 6.5 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Delhi's favourite 100% veg 24×7 cafe at NSP Pitampura. Burgers, Momos, Maggi, Shakes & more. Open always. Ph: 8368398841">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════════════════════════════ -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
-    <div class="container nav-inner">
-
-      <!-- Logo -->
-      <a href="#" class="nav-logo">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo" aria-label="Modi Mania Home">
         <span class="logo-badge">MM</span>
         <span class="logo-text">
           <span class="logo-name">Modi Mania</span>
           <span class="logo-sub">CAFE · 24×7 · NSP DELHI</span>
         </span>
       </a>
-
-      <!-- Links -->
       <ul class="nav-links" id="navLinks">
-        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
         <li><a href="#why-us" class="nav-link">Why Us</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#reviews" class="nav-link">Reviews</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-
-      <!-- CTA -->
-      <a href="https://maps.app.goo.gl/AMT9xZn1UwNrFdTt7" target="_blank" rel="noopener" class="btn btn-primary nav-cta">
-        <i class="fa-solid fa-location-dot"></i> Find Us
-      </a>
-
-      <!-- Hamburger -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
+      <div class="nav-actions">
+        <a href="menu.html" class="btn btn-primary btn-sm">View Full Menu</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       HERO SECTION
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1800&q=85" alt="Delicious food at Modi Mania Cafe" class="hero-bg-img" />
-      <div class="hero-overlay"></div>
-    </div>
-
-    <div class="container hero-container">
-      <!-- Left Content -->
-      <div class="hero-content">
-
-        <!-- Badge -->
-        <div class="hero-badge">
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg" style="background-image:url('img-food-tray.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <div class="open-badge">
           <span class="pulse-dot"></span>
-          <span>OPEN NOW &nbsp;·&nbsp; NSP, DELHI &nbsp;·&nbsp; 24×7</span>
+          OPEN NOW · 24×7
         </div>
-
-        <!-- Heading -->
-        <h1 class="hero-heading">
-          <span class="h-line">Fresh Food.</span>
-          <span class="h-line">Pure <em>Vibes.</em></span>
-          <span class="h-line">Always Open.</span>
-        </h1>
-
-        <!-- Tagline -->
-        <p class="hero-tagline">Delhi's favourite 100% vegetarian 24×7 cafe at Netaji Subhash Place. Made fresh, served fast, open always.</p>
-
-        <!-- Buttons -->
-        <div class="hero-actions">
-          <a href="#menu" class="btn btn-primary btn-lg">Explore Menu</a>
-          <a href="https://maps.app.goo.gl/AMT9xZn1UwNrFdTt7" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
-            <i class="fa-solid fa-map-pin"></i> Get Directions
+        <h1 class="hero-title">Fresh. Pure.<br><em>Always Open.</em></h1>
+        <p class="hero-tagline">Delhi's favourite 100% vegetarian 24×7 cafe at Netaji Subhash Place, NSP Pitampura.</p>
+        <p class="hero-phone"><i class="fa-solid fa-phone"></i>&ensp;8368398841</p>
+        <div class="hero-btns">
+          <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+          <a href="https://maps.google.com/?q=NSP+Tower+Pitampura+Delhi" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fa-solid fa-location-dot"></i> Get Directions
           </a>
         </div>
       </div>
-
-      <!-- Right Floating Cards -->
-      <div class="hero-right">
-        <div class="float-card fc1">
-          <div class="fc-img">
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=85" alt="Veg Mania Burger" />
-          </div>
-          <div class="fc-info">
-            <span class="fc-name">Veg Mania Burger</span>
-            <span class="fc-price">₹149</span>
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-card card-1">
+          <img src="img-burger.jpg" alt="Veg Burger" loading="eager">
+          <div class="hcard-body">
+            <span class="hcard-name">Veg Burger</span>
+            <span class="hcard-price">₹149</span>
           </div>
         </div>
-
-        <div class="float-card fc2">
-          <div class="fc-img">
-            <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=400&q=85" alt="Steam Momos" />
-          </div>
-          <div class="fc-info">
-            <span class="fc-name">Steam Momos</span>
-            <span class="fc-price">₹89</span>
+        <div class="hero-card card-2">
+          <img src="img-cold-coffee.jpg" alt="Cold Coffee" loading="eager">
+          <div class="hcard-body">
+            <span class="hcard-name">Cold Coffee</span>
+            <span class="hcard-price">₹150</span>
           </div>
         </div>
-
-        <div class="float-rating">
-          <span class="fr-stars">★</span>
-          <span class="fr-score">4.5</span>
-          <span class="fr-count">900+ Reviews</span>
+        <div class="hero-float-badge">
+          <i class="fa-solid fa-star"></i>&ensp;4.5 · Zomato · 900+ reviews
         </div>
       </div>
     </div>
-
-    <!-- Stats Bar -->
     <div class="hero-stats">
-      <div class="container hs-inner">
-        <div class="hs-item">
-          <span class="hs-num" data-target="24">24</span>
-          <span class="hs-label">×7 Open</span>
-        </div>
-        <div class="hs-divider"></div>
-        <div class="hs-item">
-          <span class="hs-num" data-target="60">60</span>
-          <span class="hs-label">+ Menu Items</span>
-        </div>
-        <div class="hs-divider"></div>
-        <div class="hs-item">
-          <span class="hs-icon"><i class="fa-solid fa-leaf"></i></span>
-          <span class="hs-label">100% Veg</span>
-        </div>
-        <div class="hs-divider"></div>
-        <div class="hs-item">
-          <span class="hs-icon"><i class="fa-solid fa-location-dot"></i></span>
-          <span class="hs-label">NSP Delhi</span>
-        </div>
+      <div class="container stats-row">
+        <div class="stat-item"><i class="fa-solid fa-clock"></i><span>24×7 Open</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat-item"><i class="fa-solid fa-leaf"></i><span>100% Pure Veg</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat-item"><i class="fa-solid fa-bowl-food"></i><span>60+ Items</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat-item"><i class="fa-solid fa-map-pin"></i><span>NSP Delhi</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat-item"><i class="fa-solid fa-phone"></i><span>8368398841</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       TICKER STRIP
-  ═══════════════════════════════════════════════════════════ -->
-  <div class="ticker-wrap" id="ticker">
-    <div class="ticker-track">
-      <span class="ticker-content">
-        BURGERS &nbsp;·&nbsp; MOMOS &nbsp;·&nbsp; MAGGI &nbsp;·&nbsp; SHAKES &nbsp;·&nbsp; WRAPS &nbsp;·&nbsp; PASTA &nbsp;·&nbsp; COLD COFFEE &nbsp;·&nbsp; FRIES &nbsp;·&nbsp; SANDWICHES &nbsp;·&nbsp; OPEN 24×7 &nbsp;·&nbsp;
-        BURGERS &nbsp;·&nbsp; MOMOS &nbsp;·&nbsp; MAGGI &nbsp;·&nbsp; SHAKES &nbsp;·&nbsp; WRAPS &nbsp;·&nbsp; PASTA &nbsp;·&nbsp; COLD COFFEE &nbsp;·&nbsp; FRIES &nbsp;·&nbsp; SANDWICHES &nbsp;·&nbsp; OPEN 24×7 &nbsp;·&nbsp;
-      </span>
+  <!-- ===== GALLERY STRIP ===== -->
+  <section class="gallery-strip" aria-label="Food gallery">
+    <div class="gallery-scroll">
+      <div class="gallery-item">
+        <img src="img-steam-momos.jpg" alt="Steam Momos" loading="lazy">
+        <span class="gallery-label">Steam Momos</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img-chowmein.jpg" alt="Chowmein" loading="lazy">
+        <span class="gallery-label">Chowmein</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img-fries.jpg" alt="Fries" loading="lazy">
+        <span class="gallery-label">Fries</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img-white-pasta.jpg" alt="White Sauce Pasta" loading="lazy">
+        <span class="gallery-label">White Pasta</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img-pan-momos.jpg" alt="Pan Momos" loading="lazy">
+        <span class="gallery-label">Pan Momos</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img-mojito-colada.jpg" alt="Mojito & Colada" loading="lazy">
+        <span class="gallery-label">Mojito & Colada</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack">
+      <span>BURGERS</span><span class="tick-dot">·</span>
+      <span>MOMOS</span><span class="tick-dot">·</span>
+      <span>MAGGI</span><span class="tick-dot">·</span>
+      <span>SHAKES</span><span class="tick-dot">·</span>
+      <span>WRAPS</span><span class="tick-dot">·</span>
+      <span>PASTA</span><span class="tick-dot">·</span>
+      <span>COLD COFFEE</span><span class="tick-dot">·</span>
+      <span>FRIES</span><span class="tick-dot">·</span>
+      <span>CHOWMEIN</span><span class="tick-dot">·</span>
+      <span>OPEN 24×7</span><span class="tick-dot">·</span>
+      <!-- duplicate for seamless loop -->
+      <span>BURGERS</span><span class="tick-dot">·</span>
+      <span>MOMOS</span><span class="tick-dot">·</span>
+      <span>MAGGI</span><span class="tick-dot">·</span>
+      <span>SHAKES</span><span class="tick-dot">·</span>
+      <span>WRAPS</span><span class="tick-dot">·</span>
+      <span>PASTA</span><span class="tick-dot">·</span>
+      <span>COLD COFFEE</span><span class="tick-dot">·</span>
+      <span>FRIES</span><span class="tick-dot">·</span>
+      <span>CHOWMEIN</span><span class="tick-dot">·</span>
+      <span>OPEN 24×7</span><span class="tick-dot">·</span>
     </div>
   </div>
 
-
-  <!-- ═══════════════════════════════════════════════════════════
-       MENU SECTION
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="section menu-section" id="menu">
+  <!-- ===== MENU PREVIEW ===== -->
+  <section class="menu-preview section-pad" id="menu-preview">
     <div class="container">
-
-      <!-- Header -->
       <div class="section-header reveal">
-        <span class="eyebrow"><i class="fa-solid fa-utensils"></i> What We Serve</span>
-        <h2 class="section-title">Our <em>Bestsellers</em></h2>
-        <p class="section-sub">Handcrafted with fresh ingredients, every single time. 100% pure vegetarian — always.</p>
+        <span class="eyebrow">What We Serve</span>
+        <h2>Our <em>Bestsellers</em></h2>
+        <p class="section-sub">A taste of what awaits — from crispy momos to creamy shakes.</p>
       </div>
-
-      <!-- Filter Pills -->
-      <div class="filter-pills reveal">
-        <button class="pill active" data-filter="all">All</button>
-        <button class="pill" data-filter="burgers">Burgers &amp; Wraps</button>
-        <button class="pill" data-filter="momos">Momos</button>
-        <button class="pill" data-filter="maggi">Maggi &amp; Pasta</button>
-        <button class="pill" data-filter="shakes">Shakes &amp; Coffee</button>
+      <div class="preview-grid">
+        <div class="preview-card reveal">
+          <div class="pcard-img-wrap">
+            <img src="img-burger.jpg" alt="Veg Burger" loading="lazy">
+            <span class="pcard-badge badge-bestseller">Bestseller</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Veg Burger</h3>
+            <p class="pcard-desc">Crispy patty, fresh veggies, secret sauce — the classic done right.</p>
+            <div class="pcard-footer">
+              <span class="pcard-price">₹149</span>
+              <button class="btn-add" aria-label="Add Veg Burger">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="preview-card reveal">
+          <div class="pcard-img-wrap">
+            <img src="img-steam-momos.jpg" alt="Steam Momos" loading="lazy">
+            <span class="pcard-badge badge-fanfave">Fan Fave</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Veg Steam Momos</h3>
+            <p class="pcard-desc">Soft steamed momos served with signature white gravy & red chutney.</p>
+            <div class="pcard-footer">
+              <span class="pcard-price">₹100+</span>
+              <button class="btn-add" aria-label="Add Momos">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="preview-card reveal">
+          <div class="pcard-img-wrap">
+            <img src="img-cold-coffee.jpg" alt="Cold Coffee" loading="lazy">
+            <span class="pcard-badge badge-musttry">Must Try</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Cold Coffee</h3>
+            <p class="pcard-desc">Frothy, chilled perfection — hazelnut, vanilla, banana & more flavours.</p>
+            <div class="pcard-footer">
+              <span class="pcard-price">₹150+</span>
+              <button class="btn-add" aria-label="Add Cold Coffee">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="preview-card reveal">
+          <div class="pcard-img-wrap">
+            <img src="img-choco-shake.jpg" alt="Chocolate Shake" loading="lazy">
+            <span class="pcard-badge badge-loved">Loved</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Chocolate Shake</h3>
+            <p class="pcard-desc">Rich, thick chocolate shake that hits different after midnight.</p>
+            <div class="pcard-footer">
+              <span class="pcard-price">₹150</span>
+              <button class="btn-add" aria-label="Add Chocolate Shake">+</button>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- Menu Grid -->
-      <div class="menu-grid" id="menuGrid">
-
-        <!-- Card 1 -->
-        <div class="menu-card reveal" data-cat="burgers">
-          <div class="mc-img-wrap">
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Veg Mania Burger" loading="lazy" />
-            <span class="mc-badge badge-best">Bestseller</span>
-            <span class="veg-dot">🟢</span>
-          </div>
-          <div class="mc-body">
-            <span class="mc-cat">Burger</span>
-            <h3 class="mc-name">Veg Mania Burger</h3>
-            <p class="mc-desc">Crispy veg patty, lettuce, tomato, our secret mania sauce in a toasted sesame bun.</p>
-            <div class="mc-footer">
-              <span class="mc-price">₹149</span>
-              <button class="add-btn" aria-label="Add Veg Mania Burger"><i class="fa-solid fa-plus"></i> Add</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="menu-card reveal" data-cat="momos">
-          <div class="mc-img-wrap">
-            <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80" alt="Tandoori Momos" loading="lazy" />
-            <span class="mc-badge badge-spicy">Spicy</span>
-            <span class="veg-dot">🟢</span>
-          </div>
-          <div class="mc-body">
-            <span class="mc-cat">Momos</span>
-            <h3 class="mc-name">Tandoori Momos</h3>
-            <p class="mc-desc">Pan-seared momos in tandoori spice coat, mint chutney and red dipping sauce.</p>
-            <div class="mc-footer">
-              <span class="mc-price">₹119</span>
-              <button class="add-btn" aria-label="Add Tandoori Momos"><i class="fa-solid fa-plus"></i> Add</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="menu-card reveal" data-cat="maggi">
-          <div class="mc-img-wrap">
-            <img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?w=600&q=80" alt="Cheese Maggi" loading="lazy" />
-            <span class="mc-badge badge-night">Late-Night</span>
-            <span class="veg-dot">🟢</span>
-          </div>
-          <div class="mc-body">
-            <span class="mc-cat">Maggi</span>
-            <h3 class="mc-name">Cheese Maggi</h3>
-            <p class="mc-desc">Masala maggi loaded with melted cheese, veggies and cracked black pepper.</p>
-            <div class="mc-footer">
-              <span class="mc-price">₹99</span>
-              <button class="add-btn" aria-label="Add Cheese Maggi"><i class="fa-solid fa-plus"></i> Add</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="menu-card reveal" data-cat="shakes">
-          <div class="mc-img-wrap">
-            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&q=80" alt="Oreo Thick Shake" loading="lazy" />
-            <span class="mc-badge badge-loved">Loved</span>
-            <span class="veg-dot">🟢</span>
-          </div>
-          <div class="mc-body">
-            <span class="mc-cat">Shake</span>
-            <h3 class="mc-name">Oreo Thick Shake</h3>
-            <p class="mc-desc">Hand-blended oreo shake with whipped cream and chocolate drizzle.</p>
-            <div class="mc-footer">
-              <span class="mc-price">₹139</span>
-              <button class="add-btn" aria-label="Add Oreo Thick Shake"><i class="fa-solid fa-plus"></i> Add</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="menu-card reveal" data-cat="burgers">
-          <div class="mc-img-wrap">
-            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=80" alt="Paneer Tikka Wrap" loading="lazy" />
-            <span class="veg-dot">🟢</span>
-          </div>
-          <div class="mc-body">
-            <span class="mc-cat">Wrap</span>
-            <h3 class="mc-name">Paneer Tikka Wrap</h3>
-            <p class="mc-desc">Grilled paneer tikka, onions, mint mayo and crisp veggies in a soft tortilla.</p>
-            <div class="mc-footer">
-              <span class="mc-price">₹149</span>
-              <button class="add-btn" aria-label="Add Paneer Tikka Wrap"><i class="fa-solid fa-plus"></i> Add</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="menu-card reveal" data-cat="shakes">
-          <div class="mc-img-wrap">
-            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&q=80" alt="Cold Coffee" loading="lazy" />
-            <span class="veg-dot">🟢</span>
-          </div>
-          <div class="mc-body">
-            <span class="mc-cat">Coffee</span>
-            <h3 class="mc-name">Cold Coffee</h3>
-            <p class="mc-desc">Triple-strength cold brew blended with milk, vanilla and ice. Seriously addictive.</p>
-            <div class="mc-footer">
-              <span class="mc-price">₹109</span>
-              <button class="add-btn" aria-label="Add Cold Coffee"><i class="fa-solid fa-plus"></i> Add</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="menu-card reveal" data-cat="maggi">
-          <div class="mc-img-wrap">
-            <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&q=80" alt="Peri Peri Fries" loading="lazy" />
-            <span class="mc-badge badge-spicy">Spicy</span>
-            <span class="veg-dot">🟢</span>
-          </div>
-          <div class="mc-body">
-            <span class="mc-cat">Fries</span>
-            <h3 class="mc-name">Peri Peri Fries</h3>
-            <p class="mc-desc">Crispy golden fries tossed in peri peri masala, topped with cheese and herbs.</p>
-            <div class="mc-footer">
-              <span class="mc-price">₹109</span>
-              <button class="add-btn" aria-label="Add Peri Peri Fries"><i class="fa-solid fa-plus"></i> Add</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="menu-card reveal" data-cat="maggi">
-          <div class="mc-img-wrap">
-            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80" alt="Pasta Arrabbiata" loading="lazy" />
-            <span class="veg-dot">🟢</span>
-          </div>
-          <div class="mc-body">
-            <span class="mc-cat">Pasta</span>
-            <h3 class="mc-name">Pasta Arrabbiata</h3>
-            <p class="mc-desc">Penne in spicy tomato arrabbiata sauce with fresh herbs and parmesan.</p>
-            <div class="mc-footer">
-              <span class="mc-price">₹169</span>
-              <button class="add-btn" aria-label="Add Pasta Arrabbiata"><i class="fa-solid fa-plus"></i> Add</button>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /menu-grid -->
-
-      <!-- Menu CTA -->
-      <div class="menu-cta reveal">
-        <p>60+ more items on our menu &nbsp;·&nbsp; Come visit us at NSP</p>
-        <a href="https://maps.app.goo.gl/AMT9xZn1UwNrFdTt7" target="_blank" rel="noopener" class="btn btn-outline">
-          <i class="fa-solid fa-store"></i> Visit The Cafe
+      <div class="preview-cta reveal">
+        <a href="menu.html" class="btn btn-primary btn-lg">
+          See our complete menu with 60+ items &rarr;
         </a>
       </div>
-
     </div>
   </section>
 
-
-  <!-- ═══════════════════════════════════════════════════════════
-       WHY US SECTION
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="section why-section" id="why-us">
-    <div class="why-bg">
-      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1800&q=70" alt="Cafe ambiance" class="why-bg-img" loading="lazy" />
-      <div class="why-overlay"></div>
-    </div>
+  <!-- ===== WHY US ===== -->
+  <section class="why-us section-pad" id="why-us">
     <div class="container">
-
-      <!-- Header -->
       <div class="section-header section-header--light reveal">
-        <span class="eyebrow eyebrow--light"><i class="fa-solid fa-star"></i> The Modi Mania Difference</span>
-        <h2 class="section-title section-title--light">Built for <em>Delhi.</em></h2>
-        <p class="section-sub section-sub--light">Four promises we never break — the reasons NSP keeps coming back.</p>
+        <span class="eyebrow eyebrow--light">Why Choose Us</span>
+        <h2>More than a cafe,<br><em>a vibe.</em></h2>
       </div>
-
-      <!-- Cards Grid -->
       <div class="why-grid">
-
         <div class="why-card reveal">
-          <div class="wc-icon">
-            <i class="fa-solid fa-leaf"></i>
-          </div>
-          <h3 class="wc-title">100% Pure Veg</h3>
-          <p class="wc-text">Every item on our menu is 100% vegetarian. No compromise, no confusion — just pure, honest food.</p>
+          <div class="why-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>100% Pure Veg</h3>
+          <p>Completely vegetarian kitchen — no exceptions, no compromises. Every dish, every time.</p>
         </div>
-
         <div class="why-card reveal">
-          <div class="wc-icon">
-            <i class="fa-solid fa-clock"></i>
-          </div>
-          <h3 class="wc-title">Open 24×7</h3>
-          <p class="wc-text">Midnight cravings or early morning hunger — we're always here, every single day of the year.</p>
+          <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Open 24×7</h3>
+          <p>Midnight cravings? Early breakfast? Late study session? We're always here. Every single day.</p>
         </div>
-
         <div class="why-card reveal">
-          <div class="wc-icon">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-          <h3 class="wc-title">5-Minute Service</h3>
-          <p class="wc-text">From order to plate in under 5 minutes. Fresh food, lightning fast — because Delhi doesn't wait.</p>
+          <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>5-Min Service</h3>
+          <p>Hot food, fast delivery to your table. Quick bites without the wait — that's the Modi Mania promise.</p>
         </div>
-
         <div class="why-card reveal">
-          <div class="wc-icon">
-            <i class="fa-solid fa-wifi"></i>
-          </div>
-          <h3 class="wc-title">Free Wi-Fi &amp; Seating</h3>
-          <p class="wc-text">Cozy interiors, fast Wi-Fi, charging points. The perfect NSP study and work cafe, any time of day.</p>
+          <div class="why-icon"><i class="fa-solid fa-wifi"></i></div>
+          <h3>Free Wi-Fi</h3>
+          <p>Work, stream, scroll — complimentary high-speed Wi-Fi for all our guests. Settle in and stay a while.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       ABOUT SECTION
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="section about-section" id="about">
-    <div class="container about-container">
-
-      <!-- Left: Image Collage -->
+  <!-- ===== ABOUT ===== -->
+  <section class="about section-pad" id="about">
+    <div class="container about-inner">
       <div class="about-images reveal">
-        <div class="ai-main">
-          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=85" alt="Modi Mania Cafe interior" loading="lazy" />
+        <div class="about-img-main">
+          <img src="img-wrap-mojito.jpg" alt="Wrap and Mojito at Modi Mania" loading="lazy">
         </div>
-        <div class="ai-sub">
-          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=500&q=85" alt="Cafe detail" loading="lazy" />
+        <div class="about-img-sub">
+          <img src="img-food-tray.jpg" alt="Food tray at Modi Mania" loading="lazy">
         </div>
-        <div class="ai-badge">
-          <span class="aib-num">5+</span>
-          <span class="aib-text">Years Serving Delhi</span>
+        <div class="about-years-badge">
+          <span class="years-num">5+</span>
+          <span class="years-label">Years of<br>Serving NSP</span>
         </div>
       </div>
-
-      <!-- Right: Text -->
       <div class="about-content reveal">
-        <span class="eyebrow"><i class="fa-solid fa-heart"></i> Our Story</span>
-        <h2 class="section-title">From NSP's Streets <em>To Your Heart</em></h2>
-        <p class="about-para">Modi Mania Cafe was born from a simple belief: Delhi deserves a place where great vegetarian food is available any time — day or night, weekday or holiday. Nestled in the heart of Netaji Subhash Place, we've been serving up fresh, flavour-packed dishes that keep our guests coming back, again and again.</p>
-        <p class="about-para">From a humble beginning with a handful of recipes, we've grown into NSP's most-loved 24×7 destination with over 60 menu items crafted with care. Every ingredient is sourced fresh, every dish is made to order, and every guest is treated like family.</p>
-
-        <!-- Checklist -->
-        <ul class="about-checks">
-          <li><i class="fa-solid fa-circle-check"></i> Fresh ingredients sourced daily</li>
-          <li><i class="fa-solid fa-circle-check"></i> FSSAI certified kitchen</li>
-          <li><i class="fa-solid fa-circle-check"></i> Dine-In &amp; Delivery available</li>
-          <li><i class="fa-solid fa-circle-check"></i> Free Wi-Fi for all guests</li>
+        <span class="eyebrow">Our Story</span>
+        <h2>Born in NSP, <em>loved by Delhi.</em></h2>
+        <p class="about-text">
+          Modi Mania Cafe started as a small corner at Netaji Subhash Place, Pitampura — and grew into Delhi's go-to 24×7 vegetarian hangout. From college students to working professionals, everyone finds their comfort food here.
+        </p>
+        <p class="about-text">
+          We believe in simple things done brilliantly — fresh ingredients, bold flavours, and a welcoming atmosphere no matter what time you walk in. That's been our recipe since day one.
+        </p>
+        <ul class="about-checklist">
+          <li><i class="fa-solid fa-check"></i> 100% vegetarian — always</li>
+          <li><i class="fa-solid fa-check"></i> Fresh ingredients every day</li>
+          <li><i class="fa-solid fa-check"></i> 60+ menu items to explore</li>
+          <li><i class="fa-solid fa-check"></i> Open every single night of the year</li>
         </ul>
-
-        <a href="https://maps.app.goo.gl/AMT9xZn1UwNrFdTt7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-          <i class="fa-solid fa-store"></i> Visit the Cafe
-        </a>
+        <a href="menu.html" class="btn btn-primary">Explore the Menu</a>
       </div>
-
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       REVIEWS SECTION
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="section reviews-section" id="reviews">
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="reviews section-pad" id="reviews">
     <div class="container">
-
-      <!-- Header -->
       <div class="section-header reveal">
-        <span class="eyebrow"><i class="fa-solid fa-star"></i> What Delhi Foodies Say</span>
-        <h2 class="section-title">Loved by <em>900+ Guests</em></h2>
-        <p class="section-sub">Real reviews from real people who can't stop coming back.</p>
+        <span class="eyebrow">What People Say</span>
+        <h2>Loved by <em>Delhi.</em></h2>
+        <p class="section-sub">Real reviews from real customers at NSP Pitampura.</p>
       </div>
-
-      <!-- Slider -->
-      <div class="reviews-slider-wrap" id="reviewsSliderWrap">
-        <div class="reviews-track" id="reviewsTrack">
-
-          <!-- Review 1 -->
+      <div class="slider-wrap reveal">
+        <div class="reviews-slider" id="reviewsSlider">
           <div class="review-card">
-            <div class="rc-header">
-              <div class="rc-avatar" style="background:#D4521A;">R</div>
-              <div class="rc-meta">
-                <span class="rc-name">Rahul Sharma</span>
-                <span class="rc-source"><i class="fa-brands fa-google"></i> Google Review</span>
-              </div>
-            </div>
-            <div class="rc-stars">★★★★★</div>
-            <p class="rc-text">"Best 24×7 veg cafe in NSP! The cheese maggi here is unreal — had it at 2AM and it was absolutely perfect. Staff is friendly and place is always clean."</p>
-            <div class="rc-footer">
-              <span class="rc-date">2 weeks ago</span>
-              <span class="rc-helpful"><i class="fa-regular fa-thumbs-up"></i> 18 found helpful</span>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Best momos in NSP, hands down. The white gravy steam momos are absolutely addictive. We come here at least twice a week after office."</p>
+            <div class="review-author">
+              <div class="review-avatar">R</div>
+              <div><strong>Rohit Sharma</strong><br><small>Pitampura, Delhi</small></div>
             </div>
           </div>
-
-          <!-- Review 2 -->
           <div class="review-card">
-            <div class="rc-header">
-              <div class="rc-avatar" style="background:#5A8A5E;">P</div>
-              <div class="rc-meta">
-                <span class="rc-name">Priya Verma</span>
-                <span class="rc-source"><i class="fa-brands fa-google"></i> Google Review</span>
-              </div>
-            </div>
-            <div class="rc-stars">★★★★★</div>
-            <p class="rc-text">"My office is near NSP and I've been coming here for lunch every day. Paneer wrap is my go-to. Super fast service and the cold coffee is addictive."</p>
-            <div class="rc-footer">
-              <span class="rc-date">1 month ago</span>
-              <span class="rc-helpful"><i class="fa-regular fa-thumbs-up"></i> 24 found helpful</span>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"3 AM hunger, Modi Mania saved us. The cold coffee and chowmein combo at midnight — honestly unbeatable. So glad this place exists 24×7."</p>
+            <div class="review-author">
+              <div class="review-avatar">P</div>
+              <div><strong>Priya Gupta</strong><br><small>Kohat Enclave, Delhi</small></div>
             </div>
           </div>
-
-          <!-- Review 3 -->
           <div class="review-card">
-            <div class="rc-header">
-              <div class="rc-avatar" style="background:#3A6EA5;">A</div>
-              <div class="rc-meta">
-                <span class="rc-name">Arjun Kapoor</span>
-                <span class="rc-source"><i class="fa-brands fa-google"></i> Google Review</span>
-              </div>
-            </div>
-            <div class="rc-stars">★★★★★</div>
-            <p class="rc-text">"Genuine 24-hour place — tested it at 4AM after a road trip and they were fully stocked and fast. Tandoori momos were 10/10. Will be back."</p>
-            <div class="rc-footer">
-              <span class="rc-date">3 weeks ago</span>
-              <span class="rc-helpful"><i class="fa-regular fa-thumbs-up"></i> 31 found helpful</span>
+            <div class="review-stars">★★★★☆</div>
+            <p class="review-text">"The combo deals are super value for money. Burger + Fries + Sandwich + Mojito all for ₹299? That's insane in Delhi. My college group comes here all the time."</p>
+            <div class="review-author">
+              <div class="review-avatar">A</div>
+              <div><strong>Aryan Kapoor</strong><br><small>Ashok Vihar, Delhi</small></div>
             </div>
           </div>
-
-          <!-- Review 4 -->
           <div class="review-card">
-            <div class="rc-header">
-              <div class="rc-avatar" style="background:#8B5CF6;">S</div>
-              <div class="rc-meta">
-                <span class="rc-name">Sneha Gupta</span>
-                <span class="rc-source"><i class="fa-brands fa-google"></i> Google Review</span>
-              </div>
-            </div>
-            <div class="rc-stars">★★★★<span style="color:#C4B8A8;">★</span></div>
-            <p class="rc-text">"Great value for money. The peri peri fries and oreo shake combo is iconic. Very clean, good vibes. My favourite spot near NSP metro."</p>
-            <div class="rc-footer">
-              <span class="rc-date">2 months ago</span>
-              <span class="rc-helpful"><i class="fa-regular fa-thumbs-up"></i> 12 found helpful</span>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Hazelnut cold coffee is a must-try! Came for momos, stayed for the coffee. The vibe here is so chill. Staff is super friendly too, always smiling."</p>
+            <div class="review-author">
+              <div class="review-avatar">N</div>
+              <div><strong>Neha Verma</strong><br><small>Shalimar Bagh, Delhi</small></div>
             </div>
           </div>
-
-          <!-- Review 5 -->
           <div class="review-card">
-            <div class="rc-header">
-              <div class="rc-avatar" style="background:#D4521A;">K</div>
-              <div class="rc-meta">
-                <span class="rc-name">Karan Bhatia</span>
-                <span class="rc-source"><i class="fa-brands fa-google"></i> Google Review</span>
-              </div>
-            </div>
-            <div class="rc-stars">★★★★★</div>
-            <p class="rc-text">"As a pure veg person, finding a good 24×7 option is hard. Modi Mania solves that completely. Menu variety is solid and everything tastes fresh."</p>
-            <div class="rc-footer">
-              <span class="rc-date">1 week ago</span>
-              <span class="rc-helpful"><i class="fa-regular fa-thumbs-up"></i> 27 found helpful</span>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Pan momos with that red chutney — absolutely fire. The Wi-Fi is fast, food comes quick, and it's open when literally nothing else is. Perfect late-night spot."</p>
+            <div class="review-author">
+              <div class="review-avatar">S</div>
+              <div><strong>Saurabh Malik</strong><br><small>Rohini Sector 3, Delhi</small></div>
             </div>
           </div>
-
-          <!-- Review 6 -->
           <div class="review-card">
-            <div class="rc-header">
-              <div class="rc-avatar" style="background:#C8963C;">N</div>
-              <div class="rc-meta">
-                <span class="rc-name">Nisha Singh</span>
-                <span class="rc-source"><i class="fa-brands fa-google"></i> Google Review</span>
-              </div>
-            </div>
-            <div class="rc-stars">★★★★★</div>
-            <p class="rc-text">"Came here with friends for a late-night study session. Free WiFi, charging points, great food — what more do you need? Modi Mania is unbeatable in NSP."</p>
-            <div class="rc-footer">
-              <span class="rc-date">5 days ago</span>
-              <span class="rc-helpful"><i class="fa-regular fa-thumbs-up"></i> 20 found helpful</span>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"White sauce pasta + virgin mojito = my go-to order. Feels like a proper cafe experience but at student-friendly prices. Modi Mania NSP is a gem."</p>
+            <div class="review-author">
+              <div class="review-avatar">T</div>
+              <div><strong>Tanvi Singh</strong><br><small>Paschim Vihar, Delhi</small></div>
             </div>
           </div>
-
-        </div><!-- /reviews-track -->
-      </div><!-- /reviews-slider-wrap -->
-
-      <!-- Controls -->
-      <div class="rev-controls reveal">
-        <button class="rev-btn" id="revPrev" aria-label="Previous reviews"><i class="fa-solid fa-arrow-left"></i></button>
-        <div class="rev-dots" id="revDots"></div>
-        <button class="rev-btn" id="revNext" aria-label="Next reviews"><i class="fa-solid fa-arrow-right"></i></button>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════════════════════
-       CTA BANNER
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="cta-banner">
-    <div class="cta-bg">
-      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=70" alt="Restaurant ambiance" loading="lazy" class="cta-bg-img" />
-      <div class="cta-overlay"></div>
-    </div>
-    <div class="container cta-content reveal">
-      <span class="eyebrow eyebrow--light"><i class="fa-solid fa-location-dot"></i> Your Table is Ready</span>
-      <h2 class="cta-title">No Reservations. <em>Just Walk In.</em></h2>
-      <p class="cta-sub">Open 24 hours, 365 days. Find us at Netaji Subhash Place, near Pitampura Metro, Delhi.</p>
-      <div class="cta-actions">
-        <a href="https://maps.app.goo.gl/AMT9xZn1UwNrFdTt7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-          <i class="fa-solid fa-map-pin"></i> Get Directions
-        </a>
-        <a href="tel:+919876543210" class="btn btn-ghost-light btn-lg">
-          <i class="fa-solid fa-phone"></i> Call Us
-        </a>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="sliderPrev" aria-label="Previous review"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="sliderNext" aria-label="Next review"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════════════════════ -->
+  <!-- ===== COMBO DEALS ===== -->
+  <section class="combos section-pad" id="combos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Special Deals</span>
+        <h2>Combo <em>Meals</em></h2>
+        <p class="section-sub">Best value bundles — more food, less spend.</p>
+      </div>
+      <div class="combo-grid">
+        <div class="combo-card reveal">
+          <div class="combo-num">01</div>
+          <div class="combo-tag">Continental</div>
+          <h3 class="combo-title">The Classic Combo</h3>
+          <ul class="combo-items">
+            <li><i class="fa-solid fa-circle-check"></i> Veg Burger</li>
+            <li><i class="fa-solid fa-circle-check"></i> Crispy Fries</li>
+            <li><i class="fa-solid fa-circle-check"></i> Veg Grill Sandwich</li>
+            <li><i class="fa-solid fa-circle-check"></i> Virgin Mojito</li>
+          </ul>
+          <div class="combo-price-wrap">
+            <span class="combo-price">₹299</span>
+            <span class="combo-save">Best Value</span>
+          </div>
+        </div>
+        <div class="combo-card reveal">
+          <div class="combo-num">02</div>
+          <div class="combo-tag">Quick Bite</div>
+          <h3 class="combo-title">The Light Bite</h3>
+          <ul class="combo-items">
+            <li><i class="fa-solid fa-circle-check"></i> Vada Pao</li>
+            <li><i class="fa-solid fa-circle-check"></i> Masala Chai</li>
+          </ul>
+          <div class="combo-price-wrap">
+            <span class="combo-price">₹109</span>
+            <span class="combo-save">Budget Pick</span>
+          </div>
+        </div>
+        <div class="combo-card reveal">
+          <div class="combo-num">03</div>
+          <div class="combo-tag">Indian</div>
+          <h3 class="combo-title">Desi Breakfast</h3>
+          <ul class="combo-items">
+            <li><i class="fa-solid fa-circle-check"></i> Aloo Parantha</li>
+            <li><i class="fa-solid fa-circle-check"></i> Masala Chai</li>
+          </ul>
+          <div class="combo-price-wrap">
+            <span class="combo-price">₹119</span>
+            <span class="combo-save">Morning Fave</span>
+          </div>
+        </div>
+      </div>
+      <div class="combo-cta reveal">
+        <a href="menu.html#combos" class="btn btn-outline">See All Combos on Menu &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-banner" aria-label="Call to action">
+    <div class="cta-bg" style="background-image:url('img-mojito-colada.jpg')"></div>
+    <div class="cta-overlay"></div>
+    <div class="container cta-inner reveal">
+      <h2>No Reservations.<br><em>Just Walk In.</em></h2>
+      <p>We're open around the clock, every day. Your table is always ready at Modi Mania.</p>
+      <a href="tel:8368398841" class="btn btn-primary btn-lg">
+        <i class="fa-solid fa-phone"></i>&ensp;Call: 8368398841
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="footer" id="contact">
     <div class="container footer-grid">
-
-      <!-- Col 1: Brand -->
       <div class="footer-col footer-brand">
-        <a href="#" class="nav-logo footer-logo">
+        <a href="index.html" class="nav-logo footer-logo" aria-label="Modi Mania Home">
           <span class="logo-badge">MM</span>
           <span class="logo-text">
-            <span class="logo-name" style="color:#FFFFFF;">Modi Mania</span>
-            <span class="logo-sub" style="color:#7A6A5A;">CAFE · 24×7 · NSP DELHI</span>
+            <span class="logo-name">Modi Mania</span>
+            <span class="logo-sub">CAFE · 24×7 · NSP DELHI</span>
           </span>
         </a>
-        <p class="footer-tagline">Delhi's favourite 100% veg 24×7 cafe at NSP. Fresh, fast &amp; always open.</p>
+        <p class="footer-tagline">Delhi's 100% vegetarian 24×7 cafe at NSP Pitampura. Fresh, fast, and always open.</p>
         <div class="footer-socials">
-          <a href="#" class="fs-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="fs-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="fs-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="#" class="fs-link" aria-label="Zomato"><i class="fa-solid fa-utensils"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://wa.me/918368398841" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
-
-      <!-- Col 2: Explore -->
       <div class="footer-col">
         <h4 class="footer-heading">Explore</h4>
         <ul class="footer-links">
-          <li><a href="#menu">Menu</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full Menu</a></li>
           <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About Us</a></li>
           <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#combos">Combo Deals</a></li>
         </ul>
       </div>
-
-      <!-- Col 3: Order Online -->
       <div class="footer-col">
         <h4 class="footer-heading">Order Online</h4>
-        <ul class="footer-links">
-          <li><a href="#"><i class="fa-solid fa-fire"></i> Zomato</a></li>
-          <li><a href="#"><i class="fa-solid fa-motorcycle"></i> Swiggy</a></li>
-          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Order</a></li>
-          <li><a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> Bulk Orders</a></li>
-        </ul>
+        <p class="footer-text">Order hot food delivered to your door through your favourite platform.</p>
+        <a href="https://zomato.com" target="_blank" rel="noopener" class="btn-zomato">
+          <i class="fa-solid fa-utensils"></i>&ensp;Order on Zomato
+        </a>
+        <p class="footer-note">Also available on Swiggy</p>
       </div>
-
-      <!-- Col 4: Visit Us -->
-      <div class="footer-col footer-visit">
+      <div class="footer-col">
         <h4 class="footer-heading">Visit Us</h4>
-        <ul class="footer-info">
-          <li>
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Near Pillar No.1, Netaji Subhash Place, Pitampura, Delhi 110034</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-clock"></i>
-            <span>Open 24 Hours · 365 Days</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-phone"></i>
-            <a href="tel:+919876543210">+91 98765 43210</a>
-          </li>
-        </ul>
-        <a href="https://maps.app.goo.gl/AMT9xZn1UwNrFdTt7" target="_blank" rel="noopener" class="btn btn-outline footer-map-btn">
-          <i class="fa-solid fa-map"></i> Open in Google Maps
+        <address class="footer-address">
+          <p><i class="fa-solid fa-map-pin"></i>&ensp;NSP Tower, NSP Pitampura,<br>Delhi 110034</p>
+          <p><i class="fa-solid fa-phone"></i>&ensp;<a href="tel:8368398841">8368398841</a></p>
+          <p><i class="fa-solid fa-clock"></i>&ensp;Open 24 Hours · 7 Days a Week</p>
+        </address>
+        <a href="https://maps.google.com/?q=NSP+Tower+Pitampura+Delhi" target="_blank" rel="noopener" class="footer-map-link">
+          <i class="fa-solid fa-location-arrow"></i> Get Directions
         </a>
       </div>
-
     </div>
-
-    <!-- Footer Bottom -->
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <span>&copy; 2025 Modi Mania Cafe 24×7 &nbsp;·&nbsp; NSP Delhi</span>
-        <span>Made with <span class="heart">♥</span> for Delhi's foodies</span>
+        <p>&copy; 2025 Modi Mania Cafe. All rights reserved.</p>
+        <p class="footer-credit">100% Pure Veg · NSP Delhi · Open 24×7</p>
       </div>
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       BACK TO TOP
-  ═══════════════════════════════════════════════════════════ -->
-  <button class="back-top" id="backTop" aria-label="Back to top">
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <i class="fa-solid fa-chevron-up"></i>
   </button>
 
-  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
